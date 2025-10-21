@@ -17,4 +17,3 @@ clean-targets:
 
 models:
   dbt_analyst_engineering_model:
-    +materialized: view
