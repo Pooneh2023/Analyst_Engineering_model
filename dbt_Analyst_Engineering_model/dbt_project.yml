@@ -16,4 +16,10 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  dbt_analyst_engineering_model:
+  your_project:
+    +materialized: view
+    staging:
+      +schema: analytics
+      +materialized: view
+    marts:
+      +schema: analytics
