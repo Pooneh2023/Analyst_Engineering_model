@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: Analyst_Engineering_model
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 3757p.A
+      POSTGRES_DB: demo_Analyst_Engineering_model
+    ports:
+      - "5435:5432"
+    volumes:
+      - pg_data_Analyst_Engineering_model:/var/lib/postgresql/data
+
+volumes:
+  pg_data_Analyst_Engineering_model:
