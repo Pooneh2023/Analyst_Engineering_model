@@ -64,4 +64,10 @@ FROM raw.INVOICES  I
 WHERE invoices_no IS NOT NULL 
 ON CONFLICT (invoices_no) DO NOTHING;
 
+DROP TABLE analytics.CUSTOMERS;
+DROP TABLE analytics.PRODUCTS ;
+DROP TABLE analytics.SALES_DATA ;
+
+
+
 
