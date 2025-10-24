@@ -1,5 +1,5 @@
 -- models/staging/stg_invoice_lines.sql
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 select
   invoice_no,
