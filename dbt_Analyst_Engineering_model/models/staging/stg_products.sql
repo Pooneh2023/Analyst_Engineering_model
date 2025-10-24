@@ -1,5 +1,5 @@
 -- models/staging/stg_products.sql
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 with ranked as (
   select
