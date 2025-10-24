@@ -16,5 +16,5 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  your_project:
-
+  dbt_analyst_engineering_model:
+    
