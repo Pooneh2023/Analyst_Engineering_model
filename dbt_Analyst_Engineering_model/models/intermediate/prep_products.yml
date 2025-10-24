@@ -1,0 +1,15 @@
+# intermediate/prep_products.yml
+version: 2
+
+models:
+  - name: prep_products
+    columns:
+      - name: unit_price
+        tests:
+          # If this is a dbt-utils test, you likely need the namespace + proper args:
+          # (and ensure dbt-utils is in packages.yml)
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 
+          # Built-ins you might also want:
+          - not_null
