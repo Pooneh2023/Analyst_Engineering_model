@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_invoices
-    description: "Cleaned 1:1 view of raw.invoices"
+    description: "1:1 view of raw.invoices"
     columns:
       - name: invoice_no
         tests: [not_null]
