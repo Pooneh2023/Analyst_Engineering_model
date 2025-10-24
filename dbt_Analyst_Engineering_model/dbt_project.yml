@@ -17,9 +17,4 @@ clean-targets:
 
 models:
   your_project:
-    +materialized: view
-    staging:
-      +schema: analytics
-      +materialized: view
-    marts:
-      +schema: analytics
+
