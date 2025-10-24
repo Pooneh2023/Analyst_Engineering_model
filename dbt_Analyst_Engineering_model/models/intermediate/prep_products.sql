@@ -1,4 +1,11 @@
-{{ config(materialized='table') }}
+{{ config
+    (
+    materialized='table',
+     partition_by = {
+            'field': 'invoice_ts',
+            'data_type': 'timestamp'
+        },
+    ) }}
 
 select
     stock_code,
