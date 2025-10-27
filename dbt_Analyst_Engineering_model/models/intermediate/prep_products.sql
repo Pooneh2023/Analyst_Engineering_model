@@ -1,17 +1,18 @@
-{{ config
-    (
-    materialized='table',
-     partition_by = {
-            'field': 'invoice_ts',
-            'data_type': 'timestamp'
-        },
-    ) }}
+-- models/intermediate/prep_products.sql
+{{ config(materialized='table') }}
 
-select
+with cleaned as (
+  select
     stock_code,
-    coalesce(nullif(description, ''), 'unknown') as description,
-    unit_price,
-    price_updated_at  
-from {{ ref('stg_products') }}
-where unit_price is not null
-  and unit_price >= 0  
+    description,
+    unit_price
+  from {{ ref('stg_products') }}
+  where unit_price is not null
+    and unit_price > 0            -- drop zero/negative prices
+)
+select distinct on (stock_code)
+  stock_code,
+  description,
+  unit_price
+from cleaned
+order by stock_code, unit_price desc

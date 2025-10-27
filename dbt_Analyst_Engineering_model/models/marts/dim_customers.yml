@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension (one row per customer_id)."
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: country
+        data_tests: [not_null]
+      - name: customer_sk
+        data_tests: [not_null, unique]
