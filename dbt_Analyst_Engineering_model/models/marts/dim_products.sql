@@ -1,8 +1,7 @@
 -- models/marts/dim_products.sql
 {{ config(materialized='table') }}
 
-
-products as (
+with products as (
     -- one descriptive row per stock_code
     select distinct on (stock_code)
         stock_code,
@@ -13,6 +12,5 @@ products as (
 
 select
     p.stock_code,
-    p.description,
+    p.description
 from products p
-

@@ -4,6 +4,6 @@
 
 select
     customer_id,
-    country,
-from base
-where rn = 1
+    country
+from {{ ref('stg_customers') }}
+
