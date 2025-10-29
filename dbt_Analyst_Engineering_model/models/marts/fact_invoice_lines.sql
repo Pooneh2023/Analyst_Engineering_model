@@ -25,4 +25,4 @@ joined as (
   left join {{ ref('dim_products') }}  dp on b.stock_code  = dp.stock_code
   left join {{ ref('dim_customers') }} dc on b.customer_id = dc.customer_id
 )
-select * from joined;
+select * from joined
