@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Product dimension with latest attributes per stock_code."
+    columns:
+      - name: stock_code
+        data_tests: [not_null, unique]
+      - name: description
+        data_tests: [not_null]
+        

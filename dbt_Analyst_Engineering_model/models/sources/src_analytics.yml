@@ -1,5 +1,5 @@
 sources:
   - name: raw
     schema: raw
-    tables:
+    tables: 
       - name: invoices
