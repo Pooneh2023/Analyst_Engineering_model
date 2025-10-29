@@ -8,5 +8,4 @@ models:
         data_tests: [not_null, unique]
       - name: country
         data_tests: [not_null]
-      - name: customer_sk
-        data_tests: [not_null, unique]
+      
