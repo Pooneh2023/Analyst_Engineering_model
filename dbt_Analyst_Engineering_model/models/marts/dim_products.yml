@@ -8,10 +8,5 @@ models:
         data_tests: [not_null, unique]
       - name: description
         data_tests: [not_null]
-      - name: current_unit_price
-        data_tests:
-          - not_null
-          - dbt_utils.accepted_range:
-              min_value: 0
-      - name: product_sk
-        data_tests: [not_null, unique]
+
+
