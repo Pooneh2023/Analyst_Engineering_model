@@ -18,10 +18,11 @@ with base as (
 joined as (
   select
     b.*,
-    dp.stock_code ,
-    dc.customer_id 
+    -- bring ATTRIBUTES, not duplicate keys
+    dp.description        as product_description,
+    dc.country            as customer_country
   from base b
   left join {{ ref('dim_products') }}  dp on b.stock_code  = dp.stock_code
   left join {{ ref('dim_customers') }} dc on b.customer_id = dc.customer_id
 )
-select * from joined
+select * from joined;
