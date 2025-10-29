@@ -8,5 +8,3 @@ models:
         data_tests: [not_null, unique]
       - name: description
         data_tests: [not_null]
-
-
