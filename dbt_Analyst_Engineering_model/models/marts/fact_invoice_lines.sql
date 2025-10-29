@@ -18,8 +18,8 @@ with base as (
 joined as (
   select
     b.*,
-    dp.product_sk,
-    dc.customer_sk
+    dp.stock_code ,
+    dc.customer_id 
   from base b
   left join {{ ref('dim_products') }}  dp on b.stock_code  = dp.stock_code
   left join {{ ref('dim_customers') }} dc on b.customer_id = dc.customer_id
