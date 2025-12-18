@@ -4,7 +4,7 @@ services:
     container_name: Analyst_Engineering_model
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 3757p.A
+      POSTGRES_PASSWORD: +++++
       POSTGRES_DB: demo_Analyst_Engineering_model
     ports:
       - "5435:5432"
